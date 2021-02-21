@@ -1,0 +1,35 @@
+.post {
+    background-color: white;
+    max-width: 600px;
+    width: 90vw;
+    padding: 16px 24px;
+}
+
+.post_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_headerLeft {
+    display: flex;
+    align-items: center;
+}
+
+.post_profilePic {
+    height: 40px;
+    border-radius: 8px;
+}
+
+.post_delete {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.post_photoUrl {
+    width: 100%;
+    margin: 8px 0;
+    object-fit: cover;
+}
+
