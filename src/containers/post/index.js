@@ -5,7 +5,7 @@ import { UserContext } from "../../contexts/user";
 import { db, storage } from "../../firebase";
 import "./style.css"
 
-export default function Post({profileUrl, username, id, photoURL, caption, comments}) {
+export default function Post({profileUrl, username, id, photoURL, caption, comments, drink}) {
     const deletePost = () => {
         var imageRef = storage.refFromURL(photoURL);
         imageRef.delete();
@@ -23,6 +23,12 @@ export default function Post({profileUrl, username, id, photoURL, caption, comme
         <div className="post_center">
             <img className="post_photoUrl" src={photoURL} />
         </div>
+
+        <div>
+            <p style={{textAlign: "center", fontSize: "18px", padding: "6px"}}>
+                <span style={{fontWeight: "500", marginRight: "4px", }}>{username}</span>is enjoying a <span style={{fontWeight: "500", marginRight: "4px", }}><i>{drink}</i></span>
+            </p>
+        </div> 
 
         <div>
             <p>

@@ -10,6 +10,7 @@ import firebase from "firebase";
 export default function CreatePost() {
     const [user, setUser] = useContext(UserContext).user;
     const [caption, setCaption] = useState("");
+    const [drink, setDrink] = useState("");
     const [image, setImage] = useState(null);
     const [progress, setProgress] = useState(0);
 
@@ -39,11 +40,13 @@ export default function CreatePost() {
                     db.collection("posts").add({
                         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                         caption: caption,
+                        drink: drink,
                         photoUrl: imageUrl,
                         username: user.email.replace("@gmail.com", ""),
                         profileUrl: user.photoURL
                     });
                 });
+                setDrink("");
                 setCaption("");
                 setProgress(0);
                 setImage(null);
@@ -58,6 +61,14 @@ export default function CreatePost() {
             <div className="createPost_loggedIn">
                 <p>Create Post</p>
                 <div className="createPost_loggedInCenter">
+                <textarea className="createPost_textarea" 
+                    rows="1"
+                    style={{paddingBottom: "10px"}}
+                    value={drink}
+                    placeholder="What are you drinking?"
+                    onChange={(e) => setDrink(e.target.value)}
+                    ></textarea>
+
                     <textarea className="createPost_textarea" 
                     rows="3"
                     value={caption}

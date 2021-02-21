@@ -22,6 +22,7 @@ export default function Feed() {
                 photoURL={post.photoUrl}
                 caption={post.caption}
                 comments={post.comments}
+                drink={post.drink}
             />;
         })}
     </div>;
