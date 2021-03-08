@@ -1,6 +1,7 @@
 # DrinkHack
 Here is a demo of the project
-<img src="https://gifyu.com/image/ZXma" alt="Mobile GIF"/>
+<br>
+<img src="https://github.com/vj5212/DrinkHack/blob/main/ezgif.com-gif-maker.gif" alt="Mobile GIF"/>
 
 ## Available Scripts
 
