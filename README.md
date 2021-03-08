@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# DrinkHack
+Here is a demo of the project
+<img src="https://gifyu.com/image/ZXma" alt="Mobile GIF"/>
 
 ## Available Scripts
 
